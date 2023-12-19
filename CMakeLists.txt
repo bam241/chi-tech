@@ -118,13 +118,14 @@ if (VTK_VERSION VERSION_LESS "8.90.0")
     include_directories(SYSTEM ${VTK_INCLUDE_DIRS})
 else ()
     find_package(VTK COMPONENTS
-            CommonCore CommonDataModel
-            IOLegacy IOCore
-            IOXML ParallelCore IOParallelXML
-            FiltersCore
-            IOEnSight
-            IOExodus
+            vtkCommonCore vtkCommonDataModel
+            vtkIOLegacy vtkIOCore
+            vtkIOXML vtkParallelCore vtkIOParallelXML
+            vtkFiltersCore
+            vtkIOEnSight
+            vtkIOExodus
             REQUIRED PATHS ${VTK_DIR})
+    message("VTK_LIBRARIES: ${VTK_LIBRARIES}")
     # vtk_module_autoinit is needed
     vtk_module_autoinit(TARGETS ${TARGET} MODULES ${VTK_LIBRARIES})
 endif()
