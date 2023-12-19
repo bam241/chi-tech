@@ -79,7 +79,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 #================================================ Default include directories
 include_directories(SYSTEM ${MPI_CXX_INCLUDE_PATH})
-include_directories(SYSTEM "${LUA_ROOT}/include")
+include_directories(SYSTEM "${LUA_ROOT}")
 include_directories(SYSTEM "${PETSC_ROOT}/include")
 
 include_directories(SYSTEM "${CHI_TECH_DIR}/external/paraview")
