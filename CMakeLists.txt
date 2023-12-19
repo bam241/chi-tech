@@ -94,7 +94,7 @@ include_directories("${CHI_TECH_DIR}/modules")
 include_directories("${CHI_TECH_DIR}/modules/LinearBoltzmannSolvers")
 
 #================================================ Library directories
-link_directories("${LUA_ROOT}/lib")
+link_directories("/lib/x86_64-linux-gnu")
 link_directories("${PETSC_ROOT}/lib")
 
 # --------------------------- VTK
@@ -140,7 +140,6 @@ string(REPLACE "-O2" "-O3" CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELW
 string(REPLACE "-O2" "-O3" CMAKE_CXX_FLAGS_MINSIZEREL ${CMAKE_CXX_FLAGS_MINSIZEREL})
 
 set(CHI_CXX_FLAGS)
-list(APPEND CHI_CXX_FLAGS "-fPIC")
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     list(APPEND CHI_CXX_FLAGS "-pedantic")
     list(APPEND CHI_CXX_FLAGS "-Wall")
