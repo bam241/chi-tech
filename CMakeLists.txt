@@ -106,10 +106,10 @@ endif()
 
 if (VTK_VERSION VERSION_LESS "8.90.0")
     find_package(VTK COMPONENTS
-            vtkCommonCore vtkCommonDataModel
-            vtkIOLegacy vtkIOCore
-            vtkIOXML vtkParallelCore vtkIOParallelXML
-            vtkFiltersCore
+            vtkCommonCore vtkCommonSystem vtkdoubleconversion vtkCommonDataModel
+            vtkIOLegacy vtkIOCore vtklz4 vtklzma vtkpugixml
+            vtkIOXML vtkParallelCore vtkIOParallelXML vtkzlib
+            vtkFiltersCore vtkloguru vtkexpat
             vtkIOEnSight
             vtkIOExodus
             REQUIRED PATHS ${VTK_DIR})
@@ -118,10 +118,10 @@ if (VTK_VERSION VERSION_LESS "8.90.0")
     include_directories(SYSTEM ${VTK_INCLUDE_DIRS})
 else ()
     find_package(VTK COMPONENTS
-            vtkCommonCore vtkCommonDataModel
-            vtkIOLegacy vtkIOCore
-            vtkIOXML vtkParallelCore vtkIOParallelXML
-            vtkFiltersCore
+            vtkCommonCore vtkCommonSystem vtkdoubleconversion vtkCommonDataModel
+            vtkIOLegacy vtkIOCore vtklz4 vtklzma vtkpugixml
+            vtkIOXML vtkParallelCore vtkIOParallelXML vtkzlib
+            vtkFiltersCore vtkloguru vtkexpat
             vtkIOEnSight
             vtkIOExodus
             REQUIRED PATHS ${VTK_DIR})
